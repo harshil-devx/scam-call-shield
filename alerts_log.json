@@ -1,0 +1,37 @@
+[
+  {
+    "event": "EMERGENCY_DISPATCHED",
+    "timestamp": "19:15:23",
+    "filename": "gujarati_scam.wav",
+    "scam_type": "Digital Arrest & Fake Police Cyber Cell Scam",
+    "language": "Gujarati",
+    "red_flags": [
+      "Claims of being Mumbai Police Cyber Cell",
+      "Fake threat of drugs found in Aadhaar-linked parcel",
+      "Coercion & threats ('Digital Arrest' — do not disconnect)",
+      "Urgent demand to transfer ₹50,000"
+    ],
+    "danger_level": "CRITICAL",
+    "recommended_action": "Disconnect the call immediately. Real police never conduct 'digital arrests' or demand money on a phone call.",
+    "contact_name": "Rohan (Son)",
+    "contact_phone": "+91 98765 43210",
+    "sms_message": "Your father may be on a scam call right now (Digital Arrest & Fake Police Cyber Cell Scam). Red flags heard: Claims of being Mumbai Police Cyber Cell, Fake threat of drugs found in Aadhaar-linked parcel, Coercion & threats ('Digital Arrest' — do not disconnect), Urgent demand to transfer ₹50,000. Please call him."
+  },
+  {
+    "event": "EMERGENCY_DISPATCHED",
+    "timestamp": "19:16:00",
+    "filename": "english_scam.wav",
+    "scam_type": "Fake Bank KYC Expiry & OTP Scam",
+    "language": "English (Explained in Hindi & Gujarati)",
+    "red_flags": [
+      "Claims of being from the Bank's KYC team",
+      "Urgency & threat that account will be blocked today",
+      "Request to share confidential OTP sent to phone"
+    ],
+    "danger_level": "CRITICAL",
+    "recommended_action": "Hang up immediately. Never share your bank OTP with anyone claiming to be from a bank.",
+    "contact_name": "Rohan (Son)",
+    "contact_phone": "+91 98765 43210",
+    "sms_message": "Your father may be on a scam call right now (Fake Bank KYC Expiry & OTP Scam). Red flags heard: Claims of being from the Bank's KYC team, Urgency & threat that account will be blocked today, Request to share confidential OTP sent to phone. Please call him."
+  }
+]

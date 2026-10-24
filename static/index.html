@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam Call Shield · Voice AI Agent</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="badge-tag">Google Gemini Live API · Native Audio Guardian</div>
+            <h1>🛡️ Scam Call Shield</h1>
+            <p class="subtitle">Real-time mid-call scam detection &amp; voice intervention in simple Gujarati and Hindi</p>
+        </header>
+
+        <div class="grid-layout">
+            <div class="card simulation-card">
+                <h2>1. Uploaded Call Recordings (.wav)</h2>
+                <p class="card-desc">Select an uploaded call recording below. Audio is processed in 0.5s chunks mid-call via Gemini Native Audio:</p>
+                
+                <div id="scenario-buttons" class="scenario-buttons">
+                    <button class="btn btn-scenario" data-file="gujarati_scam.wav" onclick="playScenario('gujarati_scam.wav', 'Gujarati - Mumbai Cyber Cell Digital Arrest Scam')">
+                        <span class="btn-lang">GU</span>
+                        <div class="btn-info">
+                            <span class="btn-title">Mumbai Police Cyber Cell (Parcel Drugs / ₹50,000)</span>
+                            <span class="btn-file">gujarati_scam.wav · 14.0s</span>
+                        </div>
+                        <span class="badge danger">Scam Call</span>
+                    </button>
+
+                    <button class="btn btn-scenario" data-file="english_scam.wav" onclick="playScenario('english_scam.wav', 'English - Bank KYC Expiry & OTP Scam')">
+                        <span class="btn-lang">EN</span>
+                        <div class="btn-info">
+                            <span class="btn-title">Bank KYC Team (Account Block Threat / Share OTP)</span>
+                            <span class="btn-file">english_scam.wav · 9.9s</span>
+                        </div>
+                        <span class="badge danger">Scam Call</span>
+                    </button>
+
+                    <button class="btn btn-scenario" data-file="English_genuine.wav" onclick="playScenario('English_genuine.wav', 'English - Swiggy Delivery Partner (Genuine)')">
+                        <span class="btn-lang">EN</span>
+                        <div class="btn-info">
+                            <span class="btn-title">Swiggy Delivery Partner (Asking Which Gate)</span>
+                            <span class="btn-file">English_genuine.wav · 6.0s</span>
+                        </div>
+                        <span class="badge safe">Genuine Call</span>
+                    </button>
+                </div>
+
+                <div class="controls-bar">
+                    <button id="stop-btn" class="btn btn-stop" onclick="stopCall()" disabled>⏹ Disconnect Call</button>
+                    <div id="call-status" class="status-indicator idle">
+                        <span class="dot"></span> <span id="status-text">Standby</span>
+                    </div>
+                </div>
+
+                <div class="audio-progress">
+                    <label id="progress-label">Call Audio Playback (0.5s chunks)</label>
+                    <div class="progress-bar-bg"><div id="progress-bar-fill"></div></div>
+                </div>
+            </div>
+
+            <div class="card monitor-card">
+                <h2>2. Real-time Guardian Monitor</h2>
+                
+                <div id="alert-banner" class="alert-box hidden">
+                    <div class="alert-header">
+                        <span class="icon">🚨</span>
+                        <div>
+                            <h3 id="alert-title">SCAM DETECTED MID-CALL</h3>
+                            <p id="alert-sub">Guardian intervening by voice while call is still active</p>
+                        </div>
+                    </div>
+                    <div class="red-flags-container">
+                        <strong>Red Flags Heard:</strong>
+                        <div id="flags-list" class="flags-tags"></div>
+                    </div>
+                </div>
+
+                <div id="safe-banner" class="safe-box hidden">
+                    <div class="alert-header">
+                        <span class="icon">✅</span>
+                        <div>
+                            <h3>GENUINE CALL — NO FALSE ALARM</h3>
+                            <p id="safe-sub">Swiggy delivery query verified safe. Guardian remained silent ("does not cry wolf").</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terminal-log">
+                    <div class="terminal-header">Real-time Native Audio Transcript &amp; Actions</div>
+                    <div id="log-content" class="log-content">
+                        <p class="muted">System ready. Select one of the uploaded .wav recordings on the left to start streaming.</p>
+                    </div>
+                </div>
+
+                <div id="dispatch-card" class="dispatch-card hidden">
+                    <div class="dispatch-header">
+                        <span>📲 Emergency Contact Auto-Dispatched (Mock SMS / JSON Stub)</span>
+                        <span class="status-live">DISPATCHED</span>
+                    </div>
+                    <p class="dispatch-msg" id="dispatch-msg"></p>
+                    <div class="dispatch-meta">
+                        Saved Contact: <strong>Rohan (Son)</strong> · Relationship: <strong>Father</strong> · +91 98765 43210 · Saved to <code>alerts_log.json</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
